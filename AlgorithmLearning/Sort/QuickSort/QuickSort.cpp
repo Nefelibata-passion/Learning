@@ -11,7 +11,11 @@ using namespace std;
 
 int n, a[100005];
 
+<<<<<<< HEAD
 // 原始快排
+=======
+// ԭʼ����
+>>>>>>> 7e85726e36eef8b3c8bca7254dd2007fa23a74f1
 void quicksort(int l, int r) {
     if (l == r)
         return;
@@ -19,10 +23,17 @@ void quicksort(int l, int r) {
     while (i < j) {
         do
             i++;
+<<<<<<< HEAD
         while (a[i] < x);  // 向右找>=x的数
         do
             j--;
         while (a[j] > x);  // 向左找<=x的数
+=======
+        while (a[i] < x);  // ������>=x����
+        do
+            j--;
+        while (a[j] > x);  // ������<=x����
+>>>>>>> 7e85726e36eef8b3c8bca7254dd2007fa23a74f1
         if (i < j)
             swap(a[i], a[j]);
     }
@@ -31,6 +42,7 @@ void quicksort(int l, int r) {
 }
 
 /*
+<<<<<<< HEAD
 1.推出while时，i=j 或 i=j+1。
 2.稳定性：相同元素的顺序可能会交换，是不稳定的。
 */
@@ -44,6 +56,21 @@ void quicksort(int l, int r) {
 */
 
 // 第k小数
+=======
+1.�Ƴ�whileʱ��i=j �� i=j+1��
+2.�ȶ��ԣ���ͬԪ�ص�˳����ܻύ�����ǲ��ȶ��ġ�
+*/
+
+/*
+1.���ÿ��ѡ��x�������������ν��Ƶȷ֣�������һ����logn��ľ����������
+ÿ��i,j��ָ����������n��Ԫ�أ�ʱ�临�Ӷ�ΪO(nlogn)��
+2.���ÿ��ѡ��x��ֻ�ܷ����һ��Ԫ�أ����˻�����n�������i,j��ָ���ߵ�
+�ܲ���=n+(n-1)+...+1=(n+1)*n/2,ʱ�临�Ӷ��˻�ΪO(n^2)��
+3.STL�Ѿ�ʵ���˸�Ч�ʵĿ��ź�����sort(a, a+n)��
+*/
+
+// ��kС��
+>>>>>>> 7e85726e36eef8b3c8bca7254dd2007fa23a74f1
 int n, k, a[100010];
 
 int qnth_element(int l, int r) {
@@ -53,10 +80,17 @@ int qnth_element(int l, int r) {
     while (i < j) {
         do
             i++;
+<<<<<<< HEAD
         while (a[i] < x);  // 向右找>=x的数
         do
             j--;
         while (a[j] > x);  // 向左找<=x的数
+=======
+        while (a[i] < x);  // ������>=x����
+        do
+            j--;
+        while (a[j] > x);  // ������<=x����
+>>>>>>> 7e85726e36eef8b3c8bca7254dd2007fa23a74f1
         if (i < j)
             swap(a[i], a[j]);
     }
@@ -67,7 +101,13 @@ int qnth_element(int l, int r) {
 }
 
 /*
+<<<<<<< HEAD
 每次取一半递归, i,j指针每层走的步数为n, n/2, n/4, ..., 1,
 总步数 = n + n/2 + n/4 + ... + 1 = 2*n,
 所以时间复杂度为O(n)。
+=======
+ÿ��ȡһ��ݹ�, i,jָ��ÿ���ߵĲ���Ϊn, n/2, n/4, ..., 1,
+�ܲ��� = n + n/2 + n/4 + ... + 1 = 2*n,
+����ʱ�临�Ӷ�ΪO(n)��
+>>>>>>> 7e85726e36eef8b3c8bca7254dd2007fa23a74f1
 */
